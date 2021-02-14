@@ -16,7 +16,7 @@
 			table th:nth-child(7),
 			table td:nth-child(8),
 			th:nth-child(8){display: none;}
-		}
+			table tbody tr{white-space:nowrap;display:inline-block;}
 	</style>
 </head>
 <body>
@@ -27,17 +27,20 @@
 			<th>13</th>
 			<th>14</th>
 		</tr>
-		<tr>
-			<td>a01</td>
-			<td>a02</td>
-			<td>a03</td>
-			<td>a04</td>
-		</tr>
-		<tr>
-			<td>b01</td>
-			<td>b02</td>
-			<td>b03</td>
-			<td>b04</td>
+		<tbody>
+			<tr>
+				<td>a01</td>
+				<td>a02</td>
+				<td>a03</td>
+				<td>a04</td>
+			</tr>
+			<tr>
+				<td>b01</td>
+				<td>b02</td>
+				<td>b03</td>
+				<td>b04</td>
+			</tr>
+		</tbody>
 	</table>
 </body>
 </html>
