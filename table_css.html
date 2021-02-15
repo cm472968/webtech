@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Beautiful Table(純CSS)</title>
+	<style>
+		.entryTable{
+			width:100%;
+			margin-bottom: 30px;
+			border:2px solid #f6bb9e;
+			border-collapse: collapse;
+		}
+		.entryTable th,.entryTable td{
+			padding:10px 20px;
+			border:1px solid #f6bb9e;
+		}
+		.entryTable th{
+			width:10em;
+			background-color: #ffeeee;
+			text-align:left	;
+		}
+		.entryTable caption{
+			margin-bottom: 10px;
+		}
+		.entryTable input[type="text"],
+		.entryTable input[type="email"],
+		.entryTable textarea,
+		.entryTable select
+		{
+			width:100%;
+			padding:10px;
+			border:1px solid #ccc;
+			box-sizing: border-box;
+			font-size: 1em;
+		}
+		.entryTable input[type="text"]:focus,
+		.entryTable input[type="email"]:focus,
+		.entryTable textarea:focus{
+			background-color: #ffffee;
+			outline: none;
+			border-left: 5px solid #ffa700;
+		}
+		label,
+		input,
+		textarea,
+		select{
+			cursor:pointer;
+		}
+		.entryBtns{
+			text-align: center;
+		}
+		.entryBtns input{
+			width:200px;
+			margin:0 10px;
+			background:#fff;
+			border:2px solid #f6bb9e;
+			border-radius:10px;
+			padding:10px;
+			font-size:1em;
+			-webkit-appearance:none;
+		}
+		.entryBtns input[type="submit"]{
+			background: #fadccc;
+		}
+		.entryBtns input:hover{
+			opacity:0.7;
+		}
+	</style>
+</head>
+<body>
+	<form action="#" method="post">
+		<table class="entryTable">
+			<caption>貓咪資料</caption>
+			<tr>
+				<th>貓咪名*</th>
+				<td><input type="text" placeholder="貓咪名" autofocus></td>
+			</tr>
+			<tr>
+				<th>年齡*</th>
+				<td>
+					<select name="age">
+						<option value="" selected="">請選擇</option>
+						<option value="1">未滿1歲</option>
+						<option value="2">1~5歲</option>
+						<option value="3">6-10歲</option>
+						<option value="4">11~15歲</option>
+						<option value="5">16~20歲</option>
+						<option value="6">不清楚</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>性別*</th>
+				<td>
+					<input type="radio" name="sex" id="man"><label for="man">男生</label>
+					<input type="radio" name="sex" id="woman"><label for="woman">女生</label>
+				</td>
+			</tr>
+			<tr>
+				<th>最愛的食物</th>
+				<td>
+					<input type="checkbox" name="lovefood" id="love1"><label for="love1">魚</label>
+					<input type="checkbox" name="lovefood" id="love2"><label for="love2">肉</label>
+					<input type="checkbox" name="lovefood" id="love3"><label for="love3">乾飼料</label>
+					<input type="checkbox" name="lovefood" id="love4"><label for="love4">貓罐頭</label>
+					<input type="checkbox" name="lovefood" id="love5"><label for="love5">肉泥</label>
+					<input type="checkbox" name="lovefood" id="love6"><label for="love6">其他</label>
+				</td>
+			</tr>
+			<tr>
+				<th>照片</th>
+				<td>
+					<input type="file">
+				</td>
+			</tr>
+		</table>
+		<table class="entryTable">
+			<caption>飼主資料</caption>
+			<tr>
+				<th>飼主名*</th>
+				<td><input type="text" placeholder="飼主名"></td>
+			</tr>
+			<tr>
+				<th>Email*</th>
+				<td><input type="email" placeholder="Email"></td>
+			</tr>
+			<tr>
+				<th>留言</th>
+				<td>
+					<textarea placeholder="留言"></textarea>
+				</td>
+			</tr>
+		</table>
+		<div class="entryBtns">
+			<input type="reset" value="清除重填">
+			<input type="submit" value="送出">
+		</div>
+	</form>
+</body>
+</html>
