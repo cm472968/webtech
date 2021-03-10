@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<svg width="100" height="100">
+  		<circle cx="50" cy="50" r="48" stroke="#FFBB00" stroke-width="4" fill="#66FFFF" />
+	</svg>
+	<svg width="500" height="140">
+  		<ellipse cx="200" cy="80" rx="100" ry="50"
+  			style="fill:yellow;stroke:purple;stroke-width:2" />
+	</svg>
+	<div >
+	<svg height="200" width="500">
+	  <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" style="fill:none;stroke:black;stroke-width:3" />
+	  Sorry, your browser does not support inline SVG.
+	</svg>
+	<div>
+
+	<svg height="400" width="450">
+	  <path id="lineAB" d="M 100 350 l 150 -300" stroke="red" stroke-width="3" fill="none" />
+	  <path id="lineBC" d="M 250 50 l 150 300" stroke="red" stroke-width="3" fill="none"/>
+	  <path d="M 175 200 l 150 0" stroke="green" stroke-width="3" fill="none" />
+	  <path d="M 100 350 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none" />
+
+		<g stroke="black" stroke-width="3" fill="black">
+			<circle id="pointA" cx="100" cy="350" r="3" />
+			<circle id="pointB" cx="250" cy="50" r="3" />
+			<circle id="pointC" cx="400" cy="350" r="3" />
+		</g>
+
+	<g font-size="30" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
+    <text x="100" y="350" dx="-30">A</text>
+    <text x="250" y="50" dy="-10">B</text>
+    <text x="400" y="350" dx="30">C</text>
+  </g>
+	  Sorry, your browser does not support inline SVG.
+	</svg>
+
+<svg height="30" width="200">
+  <text x="0" y="15" fill="red" transform="rotate(30 20,40)">I love SVG!</text>
+</svg>
+
+<svg height="110" width="110">
+  <defs>
+    <filter id="f1" x="0" y="0">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+    </filter>
+  </defs>
+  <rect width="90" height="90" stroke="green" stroke-width="3"
+  fill="yellow" filter="url(#f1)" />
+</svg>
+
+
+<hr>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+	<style>
+	  .cls-1{fill:#ad5e5e;}
+	  .cls-1,.cls-2,.cls-3{stroke:#000;stroke-miterlimit:10;}
+	  .cls-2{fill:#e2c79f;}.cls-3{fill:#a0e0ac;}
+	</style>
+  </defs>
+  <title>工作區域-2</title>
+  <g onclick="move(event)" id="方形">
+	<rect onclick="move(event)" id="紅色" class="cls-1" x="75" y="93" width="165" height="165"/>
+	<rect onclick="move(event)" id="褐色" class="cls-2" x="169" y="193" width="179" height="144" rx="12" ry="12"/>
+  </g>
+  <g onclick="move(event)" id="圓">
+	<circle onclick="move(event)" id="綠色" class="cls-3" cx="362" cy="367" r="87.5"/>
+  </g>
+</svg>
+<style>
+	.cls-1:hover,.cls-2:hover,.cls-3:hover{opacity:.5;transition.3s all;}
+</style>
+<script>
+  function move(e){
+	alert("你點了"+e.currentTarget.id+"!!!");
+  }
+</script>
+
+</body>
+</html>
